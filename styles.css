@@ -1,0 +1,144 @@
+/* Global Reset & Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import 'material-tokens.css';
+
+:root {
+  /* Premium Blue Palette (Default) */
+  --blue-primary: #3B82F6;
+  --blue-hover: #2563EB;
+  --blue-active: #1D4ED8;
+  --blue-shadow: rgba(59, 130, 246, 0.4);
+
+  /* Premium Red Palette (Brand) */
+  --red-primary: #EF4444;
+  --red-hover: #DC2626;
+  --red-active: #B91C1C;
+  --red-shadow: rgba(239, 68, 68, 0.4);
+
+  /* Neutrals */
+  --text-white: #FFFFFF;
+  --text-disabled: #9CA3AF;
+  --bg-disabled: #E5E7EB;
+  --bg-dark: #0F172A;
+  --bg-card: #1E293B;
+
+  --transition-speed: 0.2s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--bg-card);
+  padding: 3rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Button Base Styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-speed) ease;
+  text-decoration: none;
+  line-height: 1.5;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  margin: 0.5rem;
+  user-select: none;
+}
+
+/* Micro-interaction: Active Press Scale */
+.btn:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+/* --- Variant 1: Default (Blue) --- */
+.btn-default {
+  background-color: var(--blue-primary);
+  color: var(--text-white);
+  box-shadow: 0 4px 6px -1px var(--blue-shadow);
+}
+
+.btn-default:hover:not(:disabled) {
+  background-color: var(--blue-hover);
+  box-shadow: 0 10px 15px -3px var(--blue-shadow);
+  transform: translateY(-1px);
+}
+
+.btn-default:active:not(:disabled) {
+  background-color: var(--blue-active);
+}
+
+/* --- Variant 2: Brand (Red) --- */
+.btn-brand {
+  background-color: var(--red-primary);
+  color: var(--text-white);
+  box-shadow: 0 4px 6px -1px var(--red-shadow);
+}
+
+.btn-brand:hover:not(:disabled) {
+  background-color: var(--red-hover);
+  box-shadow: 0 10px 15px -3px var(--red-shadow);
+  transform: translateY(-1px);
+}
+
+.btn-brand:active:not(:disabled) {
+  background-color: var(--red-active);
+}
+
+/* --- State: Disabled --- */
+.btn:disabled,
+.btn.disabled {
+  background-color: var(--bg-disabled);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* Section Wrapper for Layout */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: #94A3B8;
+  margin-bottom: 0.5rem;
+  display: block;
+}

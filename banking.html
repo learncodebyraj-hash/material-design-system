@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Banking</title>
+    <link rel="stylesheet" href="banking.css">
+    <!-- Using Phosphor Icons for modern, clean iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header>
+            <div class="profile-group">
+                <div class="avatar"></div>
+                <div class="greeting">
+                    <p>Good Morning,</p>
+                    <h2>Alex Morgan</h2>
+                </div>
+            </div>
+            <div class="notification-btn">
+                <i class="ph ph-bell"></i>
+            </div>
+        </header>
+
+        <!-- MAIN CARD (Anti-Gravity Hero) -->
+        <div class="glass-card float-slow">
+            <div class="card-header">
+                <div class="chip"></div>
+                <span class="card-type">VISA</span>
+            </div>
+            <div class="card-body">
+                <span class="balance-label">Total Balance</span>
+                <h1 class="balance-amount">$12,450.25</h1>
+            </div>
+            <div class="card-footer">
+                <span class="card-number">**** **** **** 4589</span>
+                <span class="card-expiry">12/28</span>
+            </div>
+        </div>
+
+        <!-- QUICK ACTIONS (Floating Bubbles) -->
+        <div class="actions-container">
+            <button class="action-btn">
+                <div class="action-icon">
+                    <i class="ph ph-paper-plane-tilt"></i>
+                </div>
+                <span class="action-label">Send</span>
+            </button>
+            <button class="action-btn">
+                <div class="action-icon">
+                    <i class="ph ph-hand-coins"></i>
+                </div>
+                <span class="action-label">Request</span>
+            </button>
+            <button class="action-btn">
+                <div class="action-icon">
+                    <i class="ph ph-qr-code"></i>
+                </div>
+                <span class="action-label">Scan</span>
+            </button>
+            <button class="action-btn">
+                <div class="action-icon">
+                    <i class="ph ph-dots-three-circle"></i>
+                </div>
+                <span class="action-label">More</span>
+            </button>
+        </div>
+
+        <!-- TRANSACTIONS (Modular Tiles) -->
+        <section class="transactions-section">
+            <div class="section-header">
+                <span class="section-title">Recent Transactions</span>
+                <a href="#" class="see-all">See All</a>
+            </div>
+
+            <div class="transaction-list">
+                <!-- Item 1 -->
+                <div class="transaction-item float-medium" style="animation-delay: 0.1s;">
+                    <div class="trans-icon-box" style="background: rgba(239, 68, 68, 0.2); color: #fca5a5;">
+                        <i class="ph ph-coffee"></i>
+                    </div>
+                    <div class="trans-info">
+                        <span class="trans-title">Starbucks Coffee</span>
+                        <span class="trans-date">Today, 10:23 AM</span>
+                    </div>
+                    <span class="trans-amount negative">-$4.50</span>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="transaction-item float-medium" style="animation-delay: 0.3s;">
+                    <div class="trans-icon-box" style="background: rgba(168, 85, 247, 0.2); color: #d8b4fe;">
+                        <i class="ph ph-shopping-bag"></i>
+                    </div>
+                    <div class="trans-info">
+                        <span class="trans-title">Apple Store</span>
+                        <span class="trans-date">Yesterday, 4:45 PM</span>
+                    </div>
+                    <span class="trans-amount negative">-$1,299.00</span>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="transaction-item float-medium" style="animation-delay: 0.5s;">
+                    <div class="trans-icon-box" style="background: rgba(34, 197, 94, 0.2); color: #86efac;">
+                        <i class="ph ph-arrow-down-left"></i>
+                    </div>
+                    <div class="trans-info">
+                        <span class="trans-title">Salary Deposit</span>
+                        <span class="trans-date">Sep 28, 9:00 AM</span>
+                    </div>
+                    <span class="trans-amount positive">+$3,200.00</span>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
